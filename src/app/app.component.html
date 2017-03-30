@@ -1,3 +1,10 @@
-<h1>
-  {{title}}
-</h1>
+<h1>Task List Animation</h1>
+
+<section>
+  <ap-task [task]="task" *ngFor="let task of tasks" [showTasks]="showTasks"></ap-task>
+</section>
+
+<div class="btn" id="buttons">
+  <button *ngIf="showTasks" (click)="toggleShowTasks(true)">Hide Tasks</button>
+  <button *ngIf="!showTasks" (click)="toggleShowTasks(false)">Show Tasks</button>
+</div>

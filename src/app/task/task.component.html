@@ -1,0 +1,13 @@
+<article 
+  [@taskStatus]="taskStatus"
+  (mouseover)="toggleHighlighted(true)"
+  (mouseout)="toggleHighlighted(false)"
+  (click)="toggleActiveState()"
+  *ngIf="showTasks">
+  <header>
+    <h1>{{task.name}}</h1>
+  </header>
+  <p>
+    {{task.description}}
+  </p>
+</article>
